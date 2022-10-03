@@ -1,0 +1,6 @@
+Config is:
+Start date: 2019-08-01
+End date: 2020-08-01
+Number of epochs: 150
+Batch size: 64
+Training duration: 649.9617493152618

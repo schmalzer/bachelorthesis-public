@@ -1,0 +1,55 @@
+#headline{
+    font-family:'Courier New';
+	color:#4E443C;
+	font-variant:  monospace; text-transform: none; font-weight: 100; margin: 1rem;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.grid2x1 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:0.5rem;
+
+}
+
+.grid2x1 > div {
+    display: flex; 
+    flex-basis: 50%;  
+    justify-content: center;
+    flex-direction: column;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+  
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+
+.input{
+    margin-right:1rem;
+}
+
+#progressBarText{
+    color:white;
+}
+
+.formfield{
+    width:33%;
+    margin: 0.5rem;
+
+}
+
+.button{
+    width:16.5%;
+    height:2rem;
+}

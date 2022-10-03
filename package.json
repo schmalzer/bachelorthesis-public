@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@angular/cdk": "^14.0.5",
+    "@angular/material": "^14.0.5",
+    "@angular/material-moment-adapter": "^14.0.5"
+  }
+}

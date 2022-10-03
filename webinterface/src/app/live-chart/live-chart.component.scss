@@ -1,0 +1,21 @@
+#headline{
+    font-family:'Courier New';
+	color:#4E443C;
+	font-variant:  monospace; text-transform: none; font-weight: 100; margin: 1rem;
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+
+#settings-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    margin-right: 0.5rem;
+}

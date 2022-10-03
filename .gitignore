@@ -1,0 +1,56 @@
+.idea/
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+webinterface/dist
+webinterface/tmp
+webinterface/out-tsc
+# Only exists if Bazel was run
+webinterface/bazel-out
+
+# dependencies
+webinterface/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+webinterface/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+webinterface/.sass-cache
+webinterface/connect.lock
+webinterface/coverage
+webinterface/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+webinterface/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+LSTM/__pycache__
+webserver/node_modules
+webserver/server/node_modules
+
+PythonMachineLearning/LSTM/__pycache__
+PythonMachineLearning/LSTM/configuration.pyc
+
+node_modules

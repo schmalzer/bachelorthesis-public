@@ -1,0 +1,52 @@
+<h1 id="headline">Power Generation and Predictions<h1>
+
+    <div id="myProgress">
+        <div id="progressBarText"> </div>
+        <div id="myBar"></div>
+    </div>
+
+
+<h4></h4>
+<div>
+<mat-form-field appearance="fill" class="formfield">
+    <mat-label>Choose model</mat-label>
+    <mat-select [(ngModel)]="selectedModel">
+      <mat-option [value]="model" *ngFor="let model of availableModels">{{ model }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+<div>
+
+<div>
+  <mat-form-field appearance="fill" class="formfield">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input [formGroup]="range" [rangePicker]="picker" matStartDate="defaultStartDate" matEndDate="defaultEndDate">
+      <input matStartDate formControlName="start" placeholder="Start date">
+      <input matEndDate formControlName="end" placeholder="End date">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  
+    <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+  </mat-form-field>
+  
+</div>
+
+  <!-- Enter number of steps to predict:
+  <input type="number" class="input" [(ngModel)]="timestepsToPredict"> -->
+  <button (click)="startPredicting()">Predict with LSTM-solar Model</button>
+
+  <button (click)="startPredictingAllLSTMMOdels()">Predict with all available LSTM-solar Models</button>
+
+
+<div class="grid2x1">
+    <div>MSE of LSTM: {{MSEofLSTM | number : '1.2-2'}}</div>
+    <div>RMSE of LSTM: {{RMSEofLSTM | number : '1.2-2'}}</div>
+    <div>MAE of LSTM: {{MAEofLSTM | number : '1.2-2'}}</div>
+    <div>Coefficient of LSTM: {{ coefficientOfLSTM }}</div>
+    <div id="LSTMFixedChart"></div>
+    <div id="LSTMLiveChart"></div>
+</div>
+
+
+<app-result-table></app-result-table>

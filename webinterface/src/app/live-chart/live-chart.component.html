@@ -1,0 +1,19 @@
+<h1 id="headline" *ngIf="chartReady">Live Chart</h1>
+
+<div class="grid2x1">
+    <div id="liveChart"></div>
+</div>
+
+<div *ngIf="!chartReady" id="headline">Loading chart... Please wait</div>
+<div *ngIf="chartReady" id="settings-container">
+    <button class="button" mat-raised-button (click)="resume()" [disabled]="started">Resume Simulation</button>
+
+    <button class="button" mat-raised-button (click)="stop()" [disabled]="!started">Stop Simulation</button>
+
+    <button class="button" mat-raised-button (click)="restart()">Restart Simulation</button>
+
+    <input type="text" id="simSpeed" name="simSpeed" [(ngModel)]="simulationSpeed">
+
+    <button class="button" type="number" mat-raised-button (click)="adjustSpeed()">Adjust simulation speed</button>
+
+</div>
